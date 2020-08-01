@@ -1,0 +1,265 @@
+.site{
+    &Main {
+        padding-top: 40px;
+        padding-bottom:40px;
+        @media #{$r768}{
+            padding-bottom:0;
+        }
+    }
+    &Title{
+        margin:0;
+        padding:10px 0;
+        font-size:18px;
+        font-weight: 600;
+    }
+}
+.cate{
+    &Info{
+        padding:10px 20px;
+        background:#eee;
+        margin-bottom:30px;
+        &-desc{
+            font-size:14px;
+            font-style:italic;
+        }
+    }
+    &Main{
+        .media{
+            margin-bottom: 20px;
+            padding-bottom:20px;
+            border-bottom:1px dotted #d8d8d8;
+            @media #{$r414}{
+                flex-wrap: wrap;
+            }
+            &-pic{
+                width:150px;
+                @media #{$r375}{
+                    width:120px;
+                }
+                @media #{$r320}{
+                    width:100px;
+                }
+                img{
+                    width:100%;
+                    height:150px;
+                    @media #{$r375}{
+                        height:120px;
+                    }
+                    @media #{$r320}{
+                        height:100px;
+                    }
+                }
+            }
+            &-title{
+                font-weight: 600;
+                @extend %font1;
+                color:$color1;
+                font-size:17px;
+                @media #{$r375}{
+                    font-size:15px;
+                }
+            }
+            &-desc{
+                font-size:13px;
+                margin:10px 0 5px;
+                text-align: justify;
+                @media #{$r414}{
+                    height:55px;
+                    overflow: hidden;
+                }
+            }
+            &-more{
+                padding-top:10px;
+                a{
+                    color:#e3a261;
+                    font-size:11px;
+                    background:#5267a9;
+                    color:#fff;
+                    border-radius: 30px;
+                    padding-right:20px;
+                    padding-left:10px;
+                }
+            }
+        }
+    }
+}
+.post{
+    &Detail{
+        font-size:15px;
+        line-height: 28px;
+        img{
+            max-width: 100%;
+        }
+        p{
+            text-align: justify;
+        }
+        h2{
+            background: #e6eef1;
+            padding: 10px 20px;
+            margin: 0 0 20px;
+            line-height: 30px;
+            font-size: 16px;
+        }
+        h3,h4,h5{
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+        }
+        ul{
+            @media #{$r414}{
+                font-size:13px;
+                line-height: 24px;
+            }
+        }
+    }
+    &Main{       
+        padding-top:10px;
+    }
+    &Other{
+        margin: 30px 0 0;
+        border-top:1px dotted #ccc;
+        ul{
+            margin:0;
+
+        }
+        h3{
+            font-size:18px;
+            font-weight: 600;
+            margin-bottom:20px;
+            i{
+                margin-right:5px;
+            }
+        }
+        .media{
+            padding-bottom:10px;
+            @media #{$r414}{
+                flex-wrap: wrap;
+            }
+            &-pic{
+                width:70px;
+                img{
+                    width:100%;
+                    height:70px;
+                    border-radius: 4px;
+                }
+            }
+            &-body{
+                padding-left:15px;
+                align-self: center;
+            }
+            &-title{
+                color:#333;
+                font-size:13px;
+                height:40px;
+                overflow: hidden;
+            }
+            
+            
+        }
+    }
+}
+.sidebar{
+    &Title{
+        color: #636363;
+        text-transform: uppercase;
+        height: 45px;
+        padding: 5px 0 10px 0;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        @extend %font1;
+        font-weight: 600;
+        color:$color1;
+        &:after{
+            content: "";
+            border-bottom: 3px solid #6e86d2;
+            width: 80px;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            display: block;
+        }
+    }
+    &List{
+        margin:10px 0;
+        li{
+            padding-left:0;
+        }
+    }
+    &Thumb{
+        margin: 20px 0 0;
+        .media{
+            padding-bottom:10px;
+            @media #{$r414}{
+                flex-wrap: wrap;
+            }
+            &-pic{
+                width:60px;
+                img{
+                    width:100%;
+                    height:60px;
+                    border-radius: 4px;
+                }
+            }
+            &-body{
+                padding-left:15px;
+                align-self: center;
+            }
+            &-title{
+                color:#333;
+                font-size:13px;
+                height:40px;
+                overflow: hidden;
+            }
+           
+           
+        }
+    }
+    &Photo{
+        margin:20px 0;
+        img{
+            width:100%;
+        }
+    }
+    &Slide{
+        margin:20px 0;
+        figure{
+            position: relative;
+            
+        }
+        figcaption{
+            position: absolute;
+            left:0;
+            bottom:0;
+            padding:5px 0;
+            text-align: center;
+            width:100%;
+            background:rgba(0,0,0,.1);
+            color:#333;
+        }
+        .owl-theme .owl-nav [class*=owl-]{
+            position: absolute;
+            top:40%;
+            font-size:28px;
+            outline: none;
+            line-height: 20px;
+            padding:4px 7px;
+        }
+        .owl-theme .owl-nav .owl-prev{
+            left:0px;
+          
+        }
+        .owl-theme .owl-nav .owl-next{
+            right:0px;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover{
+            background:rgba(0,0,0,.3);
+            color:#333;
+        }
+        .owl-theme .owl-nav [class*=owl-]{
+            background:rgba(0,0,0,.3);
+            color:#fff;
+        }
+    }
+}
+

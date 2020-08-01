@@ -1,0 +1,16 @@
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    li{
+        cursor: pointer;
+    }
+}
+.tab-content{
+    display: none;
+    padding: 15px;
+    &.current{
+        display: inherit;
+    }
+}
+

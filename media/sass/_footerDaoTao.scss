@@ -1,0 +1,229 @@
+.foot{
+	padding: 30px 0 40px;
+	background: #2f3d6b;
+	color: #fff;
+    font-size:13px;
+    border-top:4px solid #e3a261;
+	@media #{$r768}{
+		padding:25px 0 70px;
+    }
+    a{
+        color:#fff;
+    }
+	.foot__container{
+		position: relative;
+	}
+	&-icon{
+		background-image:url(../../media/images/adm-medical/footer/footer-icon.png);
+	}
+	&Box{
+        display: flex;
+        align-items: center;
+		@media #{$r768}{
+			display:block;
+		}
+	}
+	&Item{
+		&Brand{
+			width:40%;
+			@media #{$r1024}{
+				padding-left:20px;
+				width:38%;
+			}
+			@media #{$r768}{
+				width:100%;
+			}
+			
+			&-logo{
+				img{
+					max-width: 100%;
+					@media #{$r1024}{
+						width:80%;
+					}
+					@media #{$r768}{
+						margin:0 auto 10px;
+						display: block;
+						width:272px;
+					}
+				}
+			}
+            &-info{
+                margin-top:-45px;
+                margin-left:138px;
+                @media #{$r1024}{
+					margin-top:-39px;
+					margin-left:98px;
+                }
+                @media #{$r768}{
+					text-align:center;
+					margin:0 0 15px;
+                }
+                a{
+                    display: block;
+                    padding-top:4px;
+                }
+            }
+		}
+		&City{
+			width:25%;
+			padding-right:20px;
+			@media #{$r1280}{
+				width:28%;
+			}
+			@media #{$r768}{
+				width:100%;
+				padding-right:22px;
+			}
+			@media #{$r414}{
+				width:100%;
+				padding-right:0;
+			}
+			&-name{
+				text-transform: uppercase;
+				font-weight: 600;
+				padding-left:20px;
+                font-size:15px;
+                color:#e3a261;
+				@media #{$r768}{
+					font-size:12px;
+					margin-bottom:10px;
+					padding-bottom:5px;
+					border-bottom:1px dotted #45698e ;
+				}
+			}
+			&Contact{
+				@media #{$r414}{
+					margin-bottom: 10px;
+				}
+				a{
+					display: block;
+					position: relative;
+					padding-left:20px;
+					margin:5px 0;
+					@media #{$r414}{
+						margin:5px 0;
+						padding-left:24px;
+						font-size:11px;
+					}
+					&::before{
+						content: '';
+						display: block;						
+						width:18px;
+						height:18px;
+						position: absolute;
+						left:-4px;
+						top:0;
+						@media #{$r414}{
+							left:0;
+							top:-2px;
+						}
+					}
+
+				}
+				&-add{
+					&::before{
+                        background-position: 0 0;
+                        @extend .foot-icon;
+					}
+				}
+				&-hotline{
+					&::before{
+                        background-position: -19px -2px;
+                        @extend .foot-icon;
+					}
+				}
+			}
+        }
+        &Social{
+			width:16%;
+			text-align: right;
+			@media #{$r1024}{
+				width:18%;
+			}
+			@media #{$r768}{
+				width:100%;
+				text-align: center;
+				margin-top:20px;
+			}
+            a{
+                display: inline-block;
+                height:38px;
+                margin:0 5px;
+                background-repeat: no-repeat;
+            }
+            &-zalo{
+                @extend .foot-icon;
+                background-position: 0 -24px;
+                width:35px;
+            }
+            &-facebook{
+                @extend .foot-icon;
+                background-position: -47px -24px;
+                width:33px;
+            }
+            &-youtube{
+                @extend .foot-icon;
+                background-position: -91px -24px;
+                width:46px;
+            }
+        }
+	}
+}
+.regft {
+    display: none;
+    @extend %font1;
+
+    @media #{$r768} {
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+
+        a {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            margin: 10px 0 10px 10px;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            text-align: left;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: uppercase;
+            padding-left: 20px;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+            &:nth-child(1) {
+                background: $color1;
+                box-shadow: 0px 3px 0px 0px #0e2d40;
+            }
+
+            &:nth-child(2) {
+                background: #e23d3a;
+                margin-right: 10px;
+                box-shadow: 0px 2px 0px 0px #8f2725;
+
+                @media #{$r375} {
+                    font-size: 13px;
+                    text-align: center;
+                    padding-left: 0;
+
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

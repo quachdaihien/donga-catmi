@@ -1,0 +1,92 @@
+.outer {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#big{
+    img{
+        border-radius: 6px;
+    }
+    .item {
+        margin: 2px;
+        color: #FFF;
+        border-radius: 3px;
+        text-align: center;
+    }
+} 
+#big.owl-theme {
+    position: relative;
+}
+
+#thumbs {
+    padding:10px 40px;
+    & .item {
+        background: #C9C9C9;
+        line-height: 70px;
+        padding: 0px;
+        margin: 2px;
+        color: #FFF;
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
+    }
+    &.current .item {
+        background: #FF5722;
+    }
+    &.owl-theme .owl-next,
+    &.owl-theme .owl-prev {
+        background:none;
+        color:#333;
+        position: absolute;
+        top:12px;
+        border-radius: 0;
+        margin-top:-10px;
+        height: 96%;
+        font-size:30px;
+        padding:0;
+    }
+    &.owl-theme .owl-next{
+        right:-8px
+    }
+    &.owl-theme .owl-prev{
+        left:-10px
+    }
+    img{
+        border-radius: 4px;
+        opacity:.8;
+        &.active{
+            opacity: 1;
+        }
+    }
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: #D6D6D6;
+}
+
+#big.owl-theme .owl-next,
+#big.owl-theme .owl-prev {
+    background: #333;
+    width: 22px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+}
+
+#big.owl-theme .owl-prev {
+    left: 10px;
+}
+
+#big.owl-theme .owl-next {
+    right: 10px;
+}
+
+

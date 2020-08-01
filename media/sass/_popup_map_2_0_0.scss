@@ -1,0 +1,206 @@
+$r1440: "(max-width:1440px)";
+$r1366: "(max-width:1366px)";
+$r1280: "(max-width:1280px)";
+$r1024: "(max-width:1024px)";
+$r768: "(max-width:812px)";
+$r414: "(max-width:414px)";
+$r375: "(max-width:375px)";
+$r360: "(max-width:360px)";
+$r320: "(max-width:320px)";
+$main:#00619b;
+
+%fontBarRe{
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.popup_map_2_0_0 {
+    &__bg {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background: url(../images/overlay1.png);
+        opacity: 0.7;
+    }
+    &__tt{
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        background-color: #248a80;
+        padding: 10px 10px;
+        text-transform: uppercase;
+        font-weight: 600;
+        @extend %fontBarRe;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+    &__box {
+        position: fixed;
+        top: 150px;
+        z-index: 4;
+        article {
+            background: #fff;
+            z-index: 11;
+            margin: 0 auto;
+            max-width: 450px;
+            width: 450px;
+            position: relative;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+    &__boxItem{
+        padding: 20px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:0px auto 20px;
+        i{
+            font-size: 12px;
+        }
+    }
+    &__add{
+        width: 50%;
+        font-size: 13px;
+        color: #000;
+    }
+    &__call{
+        a{
+            background-color: #ef810b;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+        i{
+            color: #fff;
+        }
+    }
+    &__regist{
+        color: #fff;
+        @extend %fontBarRe;
+        font-weight: 600;
+        a{
+            background-color: #ef810b;
+            color: #fff;
+            padding: 3px 30px;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+    }
+    &__content {
+        img {
+            width: auto;
+        }
+    }
+    &__ct {
+        display: flex;
+        margin-bottom: 15px;
+        a {
+            img {
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    }
+    &__pic {
+        img {
+            border-radius: 10px 0 0 10px;
+            ;
+        }
+    }
+    #popup_map_2_0_0__close {
+        background: url(../images/pucb-close2.png) 0 0 no-repeat;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        transition: all 0.5s ease 0s;
+        font-family: arial;
+        cursor: pointer;
+        &:hover {
+            transform: rotate(360deg)
+        }
+    }
+}
+
+@media #{$r1440} {
+    .popup_map_2_0_0 {
+        &__box {
+            top: 110px;
+            left: auto;
+            right: auto;
+        }
+        &__item{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media #{$r414} {
+    .popup_map_2_0_0 {
+        &__box {
+            article {
+                max-width: 390px;
+            }
+        }
+        &__tt {
+            img {
+                width: auto;
+            }
+        }
+        &__ct {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media #{$r375} {
+    .popup_map_2_0_0 {
+        &__box {
+            article {
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+@media #{$r360} {
+    .popup_map_2_0_0 {
+        &__box {
+            article {
+                max-width: 340px;
+            }
+            &Item{
+                padding: 20px 10px;
+            }
+        }
+    }
+}
+
+@media #{$r320} {
+    .popup_map_2_0_0 {
+        &__box {
+            top: 80px;
+            article {
+                max-width: 300px;
+            }
+            &Item{
+                padding: 20px 10px;
+            }
+        }
+        &__add{
+            font-size: 12px;
+        }
+        &__regist{
+            a{
+                padding: 3px 20px;
+            }
+        }
+    }
+}
